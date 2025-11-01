@@ -7,8 +7,7 @@ Website institucional de página única (*one-page*) para a Gira DF, empresa de 
 
 O projeto foi desenvolvido com foco em performance, design responsivo e otimização para mecanismos de busca (SEO Técnico Local), destacando os mais de 20 anos de experiência do fundador, Roberto Lopes.
 
-![Preview do Website Gira DF](https://placehold.co/800x400/e2e8f0/475569?text=Preview+do+Site+Gira+DF)
-*(Recomenda-se substituir esta imagem por um screenshot real do site)*
+![Preview do Website Gira DF](./assets/images/print-gira-df.png)
 
 ---
 
