@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gira DF - Manutenção Predial e Serviços</title>
+
+    <meta name="description" content="Manutenção predial, residencial e comercial em Brasília. Serviços de elétrica, hidráulica, pintura e pedreiro com garantia e rapidez. Mais de 20 anos de experiência." />
+    <meta name="keywords" content="manutenção predial brasília, reformas df, eletricista brasília, bombeiro hidráulico df, pintor brasília, pedreiro df, gira df" />
+    <meta name="author" content="Gira DF" />
+    <link rel="canonical" href="https://giradf.vercel.app/" />
+    <link rel="robots" href="./robots.txt" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#f59e0b" />
+
+    <meta property="og:title" content="Gira DF - Manutenção Predial e Reformas em Brasília" />
+    <meta property="og:description" content="Serviços de elétrica, hidráulica, pintura e mais. Mais de 20 anos de experiência." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.giradf.com.br/" />
+    <meta property="og:image" content="https://www.giradf.com.br/assets/images/logo.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="icon" type="image/png" href="./assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
+    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Fonte Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Gira DF",
+      "description": "Especialistas em manutenção predial, residencial e comercial em Brasília e entorno. Serviços de elétrica, hidráulica, pintura, pedreiro e soldador.",
+      "founder": {
+        "@type": "Person",
+        "name": "Roberto de Souza Lopes"
+      },
+      "telephone": "+5561981837044",
+      "email": "giradf.contato@gmail.com.br",
+      "url": "https://giradf.vercel.app/",
+      "image": "https://giradf.vercel.app/assets/images/logo-gira-df.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Qn 31 Conjunto 05",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "postalCode": "71880715",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Brasília"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Distrito Federal"
+        }
+      ],
+      "serviceType": [
+        "Manutenção predial",
+        "Manutenção residencial",
+        "Manutenção comercial",
+        "Serviços de elétrica",
+        "Serviços de hidráulica",
+        "Pintura",
+        "Serviços de pedreiro",
+        "Serviços de soldador"
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://giradf.vercel.app/#contact",
+          "inLanguage": "pt-BR",
+          "actionPlatform": [
+            "https://schema.org/DesktopWebPlatform",
+            "https://schema.org/IOSPlatform",
+            "https://schema.org/AndroidPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Solicitar Orçamento"
+        }
+      }
+    }
+    </script>
+
+    <script>
+            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        </script>
+        <script defer src="./_vercel/insights/script.js"></script>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-800 antialiased"  x-data="{ showBackToTop: false }"
+    @scroll.window="showBackToTop = (window.scrollY > 400)">
+
+    <!-- ===== HEADER e NAVEGAÇÃO ===== -->
+    <header x-data="{ open: false }" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Nome do Site -->
+                <a href="#home" class="text-3xl font-bold text-slate-900">
+                    Gira<span class="text-amber-500">DF</span>
+                </a>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="font-medium text-slate-600 hover:text-amber-500 transition duration-150">Home</a>
+                    <a href="#about" class="font-medium text-slate-600 hover:text-amber-500 transition duration-150">Sobre</a>
+                    <a href="#services" class="font-medium text-slate-600 hover:text-amber-500 transition duration-150">Serviços</a>
+                    <a href="#contact" class="font-medium text-slate-600 hover:text-amber-500 transition duration-150">Contato</a>
+                </div>
+                
+                <!-- Botão de Contato Desktop -->
+                <div class="hidden md:block">
+                    <a href="#contact" title="Faça um orçamento grátis" aria-label="Faça um orçamento grátis" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-5 rounded-lg transition duration-150 shadow-sm">
+                        Orçamento Grátis
+                    </a>
+                </div>
+
+                <!-- Botão do Menu Mobile -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-slate-900 focus:outline-none" aria-label="Menu Mobile" title="Menu Mobile">
+                        <svg x-show="!open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        <svg x-show="open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Painel do Menu Mobile -->
+            <div x-show="open" 
+                 @click.away="open = false"
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 transform -translate-y-2"
+                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                 x-transition:leave-end="opacity-0 transform -translate-y-2"
+                 class="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg py-4 z-40">
+                <a href="#home" @click="open = false" class="block px-6 py-3 text-lg font-medium text-slate-700 hover:bg-slate-100">Home</a>
+                <a href="#about" @click="open = false" class="block px-6 py-3 text-lg font-medium text-slate-700 hover:bg-slate-100">Sobre</a>
+                <a href="#services" @click="open = false" class="block px-6 py-3 text-lg font-medium text-slate-700 hover:bg-slate-100">Serviços</a>
+                <a href="#contact" @click="open = false" class="block px-6 py-3 text-lg font-medium text-slate-700 hover:bg-slate-100">Contato</a>
+                <div class="px-6 pt-3 pb-2">
+                    <a href="#contact" @click="open = false" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-5 rounded-lg transition duration-150 shadow-sm">
+                        Orçamento Grátis
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+        <!-- ===== SEÇÃO HOME (HERO) ===== -->
+        <section id="home" class="bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Soluções Completas em 
+                        <span class="text-amber-500">Obras e Manutenção</span>
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+                        De pequenos reparos à manutenção predial completa. Mais de 20 anos de experiência em Brasília e entorno.
+                    </p>
+                    <div class="mt-10">
+                        <a href="#contact" title="Faça um orçamento grátis" aria-label="Faça um orçamento grátis" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-150 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Solicite seu Orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO SOBRE ===== -->
+        <section id="about" class="py-20 md:py-32 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <!-- Imagem Placeholder -->
+                    <div class="w-full h-80 lg:h-full bg-slate-300 rounded-lg shadow-lg flex items-center justify-center">
+                        <img src="https://placehold.co/600x500/e2e8f0/475569?text=Gira+DF" alt="Equipe Gira DF em serviço" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    
+                    <!-- Texto Sobre -->
+                    <div>
+                        <span class="text-sm font-semibold text-amber-600 uppercase tracking-wide">Nossa História</span>
+                        <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+                            Mais de 20 Anos de Experiência
+                        </h2>
+                        <p class="mt-6 text-lg text-slate-700 leading-relaxed">
+                            Fundada na experiência de <strong>Roberto Lopes</strong>, a Gira DF acumula mais de duas décadas de dedicação à área de obras e manutenção.
+                        </p>
+                        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
+                            Com um histórico sólido em serviços residenciais, prediais e comerciais, atendemos com excelência diversos clientes em Brasília e entorno.
+                        </p>
+                        <p class="mt-4 text-lg text-slate-700 leading-relaxed">
+                            Nossa trajetória inclui a valiosa oportunidade de liderar obras no <strong>Ministério da Defesa</strong> como encarregado no Techincall, um marco que atesta nosso compromisso com a qualidade, segurança e eficiência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO SERVIÇOS ===== -->
+        <section id="services" class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Cabeçalho da Seção -->
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="text-sm font-semibold text-amber-600 uppercase tracking-wide">Nossas Especialidades</span>
+                    <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+                        Serviços de Confiança para seu Imóvel
+                    </h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        Solucionamos seus problemas com agilidade e garantia, do básico ao complexo.
+                    </p>
+                </div>
+                
+                <!-- Grid de Serviços -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Manutenção Geral -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <!-- Ícone SVG (Heroicons) -->
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Manutenção Geral</h3>
+                        <p class="text-slate-600">Cobertura completa para manter seu espaço funcional:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Manutenção Residencial</li>
+                            <li>Manutenção Comercial</li>
+                            <li>Manutenção Predial</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Elétrica -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Serviços de Elétrica</h3>
+                        <p class="text-slate-600">Segurança e funcionalidade para seu sistema elétrico:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Troca de disjuntores e tomadas</li>
+                            <li>Instalação de interruptores</li>
+                            <li>Instalação de luminárias e chuveiros</li>
+                            <li>Manutenção em circuitos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Hidráulica -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Serviços de Hidráulica</h3>
+                        <p class="text-slate-600">Soluções para vazamentos e instalações:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Reparos em válvulas e torneiras</li>
+                            <li>Limpeza de caixas de gordura</li>
+                            <li>Limpeza de caixa d'água e ralos</li>
+                            <li>Caça e reparo de vazamentos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4: Pintura -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Pinturas</h3>
+                        <p class="text-slate-600">Renovação e acabamento de alta qualidade:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Pinturas lisas</li>
+                            <li>Aplicação de texturas</li>
+                            <li>Pintura de paredes e tetos</li>
+                            <li>Áreas internas e externas</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Card 5: Pedreiro -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7l8-4 8 4m-8 4v10"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Serviços de Pedreiro</h3>
+                        <p class="text-slate-600">Construção e reparos com acabamento perfeito:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Troca de cerâmicas e porcelanato</li>
+                            <li>Correção de reboco</li>
+                            <li>Assentamento de pisos em geral</li>
+                            <li>Pequenas alvenarias</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 6: Soldador -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-100">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full mb-5">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343m11.314 11.314a8 8 0 01-11.314 0m11.314 0L20 21m-7.657-7.657L10 11m0 0L7 14m3-3L5 9m5 5l2 2"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Serviços de Soldador</h3>
+                        <p class="text-slate-600">Reparos rápidos e seguros em metal:</p>
+                        <ul class="mt-3 list-disc list-inside text-slate-600 space-y-1">
+                            <li>Pequenos reparos de solda</li>
+                            <li>Reforços estruturais leves</li>
+                            <li>Consertos em portões e grades</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Observação / Destaque -->
+                <div class="mt-16 bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg shadow">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-6 w-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-bold text-amber-900">Nosso Compromisso</h3>
+                            <p class="mt-2 text-md text-amber-800">
+                                Somos especialistas em <strong>serviços de pequeno porte com garantia e entrega rápida</strong>. 
+                                Se você precisa de manutenção rápida e eficiente, conte conosco!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO CONTATO ===== -->
+        <section id="contact" class="py-20 md:py-32 bg-slate-900 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        Pronto para resolver seu problema?
+                    </h2>
+                    <p class="mt-4 text-lg text-slate-300">
+                        Entre em contato agora mesmo e solicite um orçamento sem compromisso. 
+                        Estamos prontos para atender você em Brasília e entorno.
+                    </p>
+                    
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+                        <!-- Contato WhatsApp -->
+                        <div class="bg-slate-800 p-6 rounded-lg flex-1">
+                            <svg class="w-10 h-10 text-green-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+                            <p class="text-2xl font-bold text-slate-100">(61) 9 8183-7044</p>
+                            <a 
+                                href="https://wa.me/+5561981837044?text=Olá%2C+vim+pelo+site+e+gostaria+de+mais+informações+sobre+os+serviços+e+valores+?" 
+                                target="_blank" 
+                                rel="noopener noreferrer external" 
+                                title="Entre em contato conosco"
+                                aria-label="Entre em contato conosco"
+                                class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-150"
+                            >
+                                Iniciar Conversa
+                            </a>
+                        </div>
+                        
+                        <!-- Contato Email -->
+                        <div class="bg-slate-800 p-6 rounded-lg flex-1">
+                            <svg class="w-10 h-10 text-amber-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="text-lg md:text-xl font-bold text-slate-100">giradf.contato@gmail.com</p>
+                            <a 
+                                href="mailto:giradf.contato@gmail.com" 
+                                target="__blank" 
+                                rel="noopener noreferrer external" 
+                                title="Faça um orçamento grátis"
+                                aria-label="Faça um orçamento grátis"
+                                class="mt-4 inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-150"
+                            >
+                                Enviar Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-sm text-slate-600">
+                    &copy; 2025 Gira DF Serviços e Manutenção. Todos os direitos reservados.
+                </p>
+                <div class="flex justify-center space-x-6 mt-4 md:mt-0">
+                    <a href="#about" class="text-sm text-slate-600 hover:text-amber-500">Sobre</a>
+                    <a href="#services" class="text-sm text-slate-600 hover:text-amber-500">Serviços</a>
+                    <a href="#contact" class="text-sm text-slate-600 hover:text-amber-500">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" x-show="showBackToTop" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform translate-y-4"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform translate-y-4"
+        class="fixed bottom-8 right-8 z-50 p-3 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface transition-all duration-300"
+        aria-label="Voltar ao topo">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
